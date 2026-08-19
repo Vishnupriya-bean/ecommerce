@@ -5,7 +5,7 @@ from bcrypt import hashpw, gensalt, checkpw
 from flask_jwt_extended import create_access_token,jwt_required, get_jwt_identity
 
 
-
+#add code
 auth_bp = Blueprint("auth", __name__, url_prefix="/auth")
 
 # REGISTER ----------------
@@ -23,7 +23,7 @@ def register():
         return jsonify({
         "error": "user_name, email, password and delivery_address are required"
     }), 400
-
+    
 
    
     existing_user = User.query.filter_by(email=email).first()
